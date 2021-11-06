@@ -143,13 +143,13 @@ rules: list[Keys] = []
 def add_rule(stream, keys: Keys, result: str, comment: str) -> None:
     # https://github.com/samhocevar/wincompose/blob/7f273636087bd55cbedc178babf5c36375a836f4/src/wincompose/sequences/Key.cs#L55
     replacements = {
-        "⎄": "Multi_key",
+        "⎄": "Multi_key", " ": "space",
         "←": "Left", "↑": "Up", "→": "Right", "↓": "Down",
         "⇱": "Home", "⇲": "End", "⌫": "Backspace", "⌦": "Delete", "↹": "Tab", "↵": "Return",
         ":": "colon", "<": "less", ">": "greater",
     }
-    stream.write("<Multi_key><{}> : \"{}\" #{}\n".format(
-        '><'.join(replacements.get(i, i) for i in str(keys)),
+    stream.write("<Multi_key> <{}> : \"{}\" #{}\n".format(
+        '> <'.join(replacements.get(i, i) for i in str(keys)),
         result.replace(r'"', r'\0x0022'),  # \" doesnt work for some reason
         comment))
     if CHECK and keys in rules: warning(f"[{keys}] found more than once ({comment})")
@@ -288,7 +288,7 @@ def main() -> None:
 
     info("writing characters...")
 
-    with open(expanduser("temp"), 'w', encoding='utf-8') as f:
+    with open(expanduser("~/.XCompose"), 'w', encoding='utf-8') as f:
         write_to_file(f, definitions, macros)
 
     info(f"done! {datetime.now() - then}")
