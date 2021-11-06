@@ -9,7 +9,6 @@ from logging import info, warning, basicConfig
 from os.path import exists, expanduser
 from string import ascii_letters
 from typing import Iterable, TextIO, Optional, NewType
-from unicodedata import normalize
 from urllib.request import urlopen
 
 from data import custom_dia, diacritics, ligatures
@@ -116,17 +115,16 @@ def findmap(char: str) -> list[Keys]:
     # combining diacritic
     if "◌" + char in diacritics: maps.append(add_diacritic(COMBINING, "◌" + char))
 
-    # canonical decomposition (splits ü into u + ◌̈ into ["u])
-    normal = normalize('NFD', char)
-    if len(normal) > 1:
-        maps.extend(make_diacritic_sequences(["◌" + x for x in normal[1:]], normal[0]))
-
-    # compatibility decomposition (does circled letters and superscripts and stuff)
+    # decomposition
     types, deco = decompose(char)
     if types == "<compat>" and deco.startswith("(") and deco.endswith(")"):
         maps.extend(make_diacritic_sequences(("parens",), deco[1:-1]))
     elif types:
+        # compatibility decomposition (does circled letters and superscripts and stuff)
         maps.extend(make_diacritic_sequences((types,), deco))
+    elif len(deco) >= 2:
+        # canonical decomposition (splits ü into u + ◌̈ into ["u])
+        maps.extend(make_diacritic_sequences(["◌" + x for x in deco[1:]], deco[0]))
 
     # makes ligatures
     if char in ligatures: maps.extend(
@@ -290,7 +288,7 @@ def main() -> None:
 
     info("writing characters...")
 
-    with open(expanduser("~/.XCompose"), 'w', encoding='utf-8') as f:
+    with open(expanduser("temp"), 'w', encoding='utf-8') as f:
         write_to_file(f, definitions, macros)
 
     info(f"done! {datetime.now() - then}")
