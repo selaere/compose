@@ -39,7 +39,7 @@ custom_dia = {
 
     # ά GREEK SMALL LETTER ALPHA WITH TONOS and
     # ά GREEK SMALL LETTER ALPHA WITH OXIA are encoded differently but decompose to the same
-    # sequence а + ◌́ for ??? reasons
+    # sequence α + ◌́ for ??? reasons
     "OXIA": ("αεηιουωΑΕΗϊΙϋΥΟΩ¨", "άέήίόύώΆΈΉΐΊΰΎΌΏ΅"),
 
     # i dont think there's any way of automating this
