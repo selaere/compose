@@ -6,3 +6,6 @@ that won't be available on most keyboards. make sure to customize it for your ow
 ``custom_dia.py``)
 
 as of now the code is bad and uncommented and sus. this will probably change
+
+https://gist.github.com/selaere/351ac984c31f04eefa5450d33c6cc422
+^ sample output
