@@ -34,7 +34,7 @@ custom_dia = {
     "UM": ("dlmnrʀtꝚꝛ", "ꝱꝲꝳꝴꝶꝵꝷꝜꝝ"),
     "INSULAR": ("GgDdFfRrSsTt", "ꝽᵹꝹꝺꝻꝼꞂꞃꞄꞅꞆꞇ"),
 
-    # no these dont discompose. i dont know either
+    # no these dont decompose. i dont know either
     "GLOTTAL": ("AaIiUu", "ꞺꞻꞼꞽꞾꞿ"),
 
     # ά GREEK SMALL LETTER ALPHA WITH TONOS and
