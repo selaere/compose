@@ -1,8 +1,8 @@
+# -*- coding: utf-8 -*-
 """
 customize this
 
 i recommend Unifont to be able to see all of these weird characters
-
 """
 
 custom_dia = {
@@ -12,17 +12,17 @@ custom_dia = {
     "OBLIQUESTROKE": ("GgKkNnRrSs", "ꞠꞡꞢꞣꞤꞥꞦꞧꞨꞩ"),
     "SLASH": ("oACcTEeatKkQqVvUuþɔ",
               "øȺȻȼȾɆɇⱥⱦꝂꝃꝘꝙꝞꝟꞸꞹᵺꬿ"),
-    "ASCENDER": ("ГгBbCcDdGgKkPpRTtYydhꜧɢqHʈ",
-                 "ҐґƁɓƇƈƊɗƓɠƘƙƤƥƦƬƭƳƴɗɦɧʛʠꞪ𝼉"),
-    "DESCENDER": ("ЙйЛлМмНнҒғХxЗзСсӅӆ" "mFfQqdnrszltTʮɯɹaɗeɛɜəiɔʃuʒRMHhɬʀꭓꭗɮɺǃʤɨoʧc",
-                  "ҊҋӅӆӍӎӉӊӺӻӼӽҘҙҪҫԒԓ" "ɱƑƒɊɋɖɳɽʂʐɭʈƮʯɰɻᶏᶑᶒᶓᶔᶕᶖᶗᶘᶙᶚⱤⱮꜦꜧꞎꭆꭕꭙ𝼅𝼈𝼊𝼙𝼚𝼛𝼜𝼝"),
+    "ASCENDER": ("ГгBbCcDdGgKkPpRTtYydɖhꜧɢqHʈ",
+                 "ҐґƁɓƇƈƊɗƓɠƘƙƤƥƦƬƭƳƴɗᶑɦɧʛʠꞪ𝼉"),
+    "DESCENDER": ("ЙйЛлМмНнҒғХxЗзСсӅӆ" "mFfQqdnrszltƭTʮɯɹaɗeɛɜəiɔʃuʒRMHhɬʀꭓꭗɮɺǃʤɨoʧc",
+                  "ҊҋӅӆӍӎӉӊӺӻӼӽҘҙҪҫԒԓ" "ɱƑƒɊɋɖɳɽʂʐɭʈ𝼉ƮʯɰɻᶏᶑᶒᶓᶔᶕᶖᶗᶘᶙᶚⱤⱮꜦꜧꞎꭆꭕꭙ𝼅𝼈𝼊𝼙𝼚𝼛𝼜𝼝"),
     "PALATAL": ("tbdfgklmnprsʃvxzchCSZʤɬŋɹɾʧʒ",
                 "ƫᶀᶁᶂᶃᶄᶅᶆᶇᶈᶉᶊᶋᶌᶍᶎꞔꞕꟄꟅꟆ𝼒𝼓𝼔𝼕𝼖𝼗𝼘"),
     "MOLODSTOVPALATAL": ("ԀԁЗзЛлНнТт", "ԂԃԄԅԈԉԊԋԎԏ"),
     "DESCENDER2": ("ГгҼҽЖжКкНнПпТтХхЧчЗзҺһЛл" "HhKkZzNn",
                    "ӶӷҾҿҖҗҚқҢңԤԥҬҭҲҳҶҷԆԇԦԧԮԯ" "ⱧⱨⱩⱪⱫⱬꞐꞑ"),
-    "FLIPPED": ("∈∉∊∼≒≔" "!?23ẟEeʒƷɘvVɾaɑɛhrʀʃtwyʔkæœgFfAⱭᵋɽᴇᵹꝽLlHƐKTⱵⱶmℲPMɞꭐ&YGꞀ⅂ιΩᵷɡⱵⱶʞŋᴋ" "ЗзϲϹͼϾϵ",
-                "∋∌∍∽≓≕" "¡¿↊↋ƍƎɘƹƸǝʌɅɿɐɒɜɥɹʁʅʇʍʎʖʞᴂᴔᵷℲɟⱯⱰᵌⱹⱻꝾꝿꞀꞁꞍꞫꞰꞱꟵꟶɯꟻꟼꟽʚꭑ⅋⅄⅁⅂⅃℩℧𝼁𝼁Ꟶꟶ𝼃𝼇𝼐" "ԐԑͻϽͽϿ϶"),
+    "FLIPPED": ("∈∉∊∼≒≔" "!?‽23ẟEeʒƷɘvVɾaɑɛhrʀʃtwyʔkæœgFfAⱭᵋɽᴇᵹꝽLlHƐKTⱵⱶmℲPMɞꭐ&YG⅂ιΩᵷɡⱵⱶʞŋᴋ" "ЗзϲϹͼϾϵ",
+                "∋∌∍∽≓≕" "¡¿⸘↊↋ƍƎɘƹƸǝʌɅɿɐɒɜɥɹʁʅʇʍʎʖʞᴂᴔᵷℲɟⱯⱰᵌⱹⱻꝾꝿꞀꞁꞍꞫꞰꞱꟵꟶɯꟻꟼꟽʚꭑ⅋⅄⅁⅂⅃℩℧𝼁𝼁Ꟶꟶ𝼃𝼇𝼐" "ԐԑͻϽͽϿ϶"),
     "SIDEWAYS": ("oɔøuüɯIQ", "ᴑᴒᴓᴝᴞᴟꟷ℺"),
     "SMALLCAPS": ("ginrybhlœaæcdðđɖejkłmoȣɔptuvwzʒfsqγλπρψлωɯɬ𝼁Ⅎ",
                   "ɢɪɴʀʏʙʜʟɶᴀᴁᴄᴅᴆᴆᴆᴇᴊᴋᴌᴍᴏᴕᴐᴘᴛᴜᴠᴡᴢᴣꜰꜱꞯᴦᴧᴨᴩᴪᴫꭥꟺ𝼄𝼂ⅎ"),
@@ -30,7 +30,7 @@ custom_dia = {
              "ȡȴȵȶɕʆʑʓʝỾỿⱴⱺꞲꬶꬺꬻꬼꭉꭊꭌꭔꭖꭘ𝼌𝼍𝼎𝼏𝼞"),
     "HOOK": ("ГгКкНнПпЛлӇӈ", "ҔҕӃӄӇӈҦҧԠԡԢԣ"),
     "TILDE": ("lbdfmnprɾstzLɫɹ", "ɫᵬᵭᵮᵯᵰᵱᵲᵳᵴᵵᵶⱢꬸꭨ"),
-    "LONG": ("NnrxcɹI", "Ƞƞɼꭗʗɺꟾ"),
+    "LONG": ("sNnrxcɹIɯ", "ſȠƞɼꭗʗɺꟾɰ"),
     "UM": ("dlmnrʀtꝚꝛ", "ꝱꝲꝳꝴꝶꝵꝷꝜꝝ"),
     "INSULAR": ("GgDdFfRrSsTt", "ꝽᵹꝹꝺꝻꝼꞂꞃꞄꞅꞆꞇ"),
 
