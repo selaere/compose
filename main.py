@@ -11,7 +11,7 @@ from string import ascii_letters
 from typing import Iterable, Optional, NewType
 from urllib.request import urlopen
 
-from data import custom_dia, diacritics, ligatures
+from data import custom_dia, diacritics, ligatures, spacing_dia
 
 basicConfig(level=10)
 
@@ -31,6 +31,7 @@ ESCAPE    = " {}"   # escapes one non-core character
 ESCAPE2   = "↹{}↵"  # escapes more than one character
 LIGATURE  = "&{}↵"
 COMBINING = Keys("?")
+SPACING   = Keys("|")
 
 SORT  = True  # this sorts the sequences and saves them in definitions_sorted
 CHECK = True  # enable or disable checking for duplicates and shadows
@@ -113,6 +114,10 @@ def findmap(char: str) -> list[Keys]:
 
     # combining diacritic
     if "◌" + char in diacritics: maps.append(add_diacritic(COMBINING, "◌" + char))
+
+    # spacing character
+    if (index := spacing_dia[1].find(char)) >= 0:
+        maps.append(Keys(diacritics["◌" + spacing_dia[0][index]] + SPACING))
 
     # decomposition
     types, deco = decompose(char)

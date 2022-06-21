@@ -678,6 +678,7 @@
 ⊵::supgeq
 ⊶::originalof
 ⊷::imageof
+⊸::bindl
 ⊸::multimap
 ⊹::hermatrix
 ⊻::lxor
@@ -719,6 +720,8 @@
 ⍴::aplr
 ⍵::aplw
 ⍺::apla
+⎉::bqnrank
+⎕::quad
 
 // BOX DRAWING
 
@@ -818,6 +821,7 @@
 ♭::flt
 ♮::nat
 ♯::srp
+⚇::bqndepth
 ⚢::lesb
 ⚣::gay
 ⚤::hetero
@@ -825,6 +829,7 @@
 
 // MISCELLANEOUS MATHEMATICAL SYMBOLS-A
 
+⟜::bindr
 ⟨::a(
 ⟩::a)
 
