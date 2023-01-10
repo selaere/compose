@@ -46,7 +46,7 @@ custom_dia: dict[str, tuple[str, str]] = {
     # sequence α + ◌́ for ??? reasons
     "OXIA": ("αεηιουωΑΕΗϊΙϋΥΟΩ¨", "άέήίόύώΆΈΉΐΊΰΎΌΏ΅"),
 
-    # i dont think there's any way of automating this
+    # i dont think there's any good way of automating this
     "BOLD": ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡϴΣΤΥΦΧΨΩ∇αβγδεζηθικλμνξοπρςστυφχψω∂ϵϑϰϕϱϖϜϝ0123456789",
              "𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳𝚨𝚩𝚪𝚫𝚬𝚭𝚮𝚯𝚰𝚱𝚲𝚳𝚴𝚵𝚶𝚷𝚸𝚹𝚺𝚻𝚼𝚽𝚾𝚿𝛀𝛁𝛂𝛃𝛄𝛅𝛆𝛇𝛈𝛉𝛊𝛋𝛌𝛍𝛎𝛏𝛐𝛑𝛒𝛓𝛔𝛕𝛖𝛗𝛘𝛙𝛚𝛛𝛜𝛝𝛞𝛟𝛠𝛡𝟊𝟋𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗"),
     "ITALIC": ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡϴΣΤΥΦΧΨΩ∇αβγδεζηθικλμνξοπρςστυφχψω∂ϵϑϰϕϱϖıȷ",
@@ -178,7 +178,7 @@ diacritics: dict[str, str] = {
     "GLOTTAL": "glt.",
     "QUAD": "[",
     "UNDERBAR": "=",
-    "DIAERESIS": "\"",
+    "DIAERESIS": "¨",
 
     "OXIA": "\"",
     "BOLD": "B.",
@@ -199,16 +199,6 @@ diacritics: dict[str, str] = {
 ligatures = {
     "Æ": "AE", "æ": "ae",
     "Œ": "OE", "œ": "oe",
-    "ꭢ": "ɔe",
-    "ꭣ": "uo",
-    "ꭦ": "dʐ",
-    "ꭧ": "tʂ",
-    "ꬱ": "aə",
-    "ꭀ": "oə",
-    "ꭁ": "əø",
-    "ꭂ": "əɵ",
-    "ꭃ": "co",
-    "ꭄ": "cø",
     "Ꜳ": "AA", "ꜳ": "aa",
     "Ꜵ": "AO", "ꜵ": "ao",
     "Ꜷ": "AU", "ꜷ": "au",
@@ -216,28 +206,11 @@ ligatures = {
     "Ꜽ": "AY", "ꜽ": "ay",
     "Ꝡ": "WY", "ꝡ": "wy",
     "Ꝏ": "OO", "ꝏ": "oo",
-    "ᵫ": "ue",
-    "ɮ": "lʒ",
-    "ʣ": "dz",
-    "ʤ": "dʒ",
-    "ʥ": "dʑ",
-    "ʦ": "ts",
-    "ʧ": "tʃ",
-    "ʨ": "tɕ",
-    "ʩ": "fŋ",
-    "ʪ": "ls",
-    "ʫ": "lz",
-    "ȸ": "db",
-    "ȹ": "qp",
-    "ꜩ": "tʒ",
-    "𝼑": "lr",
-    "ﬀ": "ff",
-    "ﬁ": "fi",
-    "ﬂ": "fl",
-    "ﬃ": "ffi",
-    "ﬄ": "ffl",
-    "ﬅ": "ſt",
-    "ﬆ": "st",
+    "ᵫ": "ue", "ɮ": "lʒ", "ʣ": "dz", "ʤ": "dʒ", "ʥ": "dʑ", "ʦ": "ts", "ʧ": "tʃ", "ʨ": "tɕ",
+    "ʩ": "fŋ", "ʪ": "ls", "ʫ": "lz", "ȸ": "db", "ȹ": "qp", "ꜩ": "tʒ", "𝼑": "lr", "ﬀ": "ff",
+    "ﬁ": "fi", "ﬂ": "fl", "ﬃ": "ffi", "ﬄ": "ffl", "ﬅ": "ſt", "ﬆ": "st",
+    "ꭢ": "ɔe", "ꭣ": "uo", "ꭦ": "dʐ", "ꭧ": "tʂ", "ꬱ": "aə", "ꭀ": "oə", "ꭁ": "əø", "ꭂ": "əɵ",
+    "ꭃ": "co", "ꭄ": "cø",
 }
 
 spacing_dia: tuple[str, str] = (
@@ -245,3 +218,29 @@ spacing_dia: tuple[str, str] = (
     "`¨¯´¸ˆˇˈˌˍˎˏ˘˙˚˛˜˝ˬ˭˳˷"
 )
 spacing_dia = (''.join(spacing_dia[0].strip('◌').split('◌')), spacing_dia[1])
+
+keynames = {
+    # special keys supported by wincompose
+    "⎄": "Multi_key", " ": "space",
+    "←": "Left", "↑": "Up", "→": "Right", "↓": "Down",
+    "⇱": "Home", "⇲": "End", "⌫": "Backspace", "⌦": "Delete", "↹": "Tab", "↵": "Return",
+    ":": "colon", "<": "less", ">": "greater",
+    # these aren't necessary for wincompose but won't hurt to have
+    " ": "space", "!": "exclam", "\"": "quotedbl", "#": "numbersign", "$": "dollar",
+    "%": "percent", "&": "ampersand", "'": "apostrophe", "(": "parenleft",
+    ")": "parenright", "+": "plus", ",": "comma", "-": "minus", ".": "period",
+    ";": "semicolon", "=": "equal", "@": "at", "[": "bracketleft", "\\": "backslash",
+    "]": "bracketright", "_": "underscore", "{": "braceleft", "|": "bar",
+    "}": "braceright",
+    # commented out because my keyboard has the dead ones
+    # "~": "asciitilde", "^": "asciicircum", "`": "grave",
+    # i got used to using the numpad keys for these
+    # "*": "asterisk", "/": "slash",
+    "*": "KP_Multiply", "/": "KP_Divide",
+    # specific ones from my keyboard. won't work in wincompose
+    "~": "dead_tilde", "^": "dead_circumflex", "`": "dead_grave",
+    "ç": "ccedilla", "Ç": "Ccedilla", "ñ": "ntilde", "Ñ": "Ntilde",
+    "º": "masculine", "ª": "ordfeminine", "¡": "exclamdown", "¿": "questiondown",
+    "·": "periodcentered", "¬": "notsign",
+    "´": "dead_acute", "¨": "dead_diaeresis",
+}

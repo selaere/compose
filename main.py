@@ -11,7 +11,7 @@ from string import ascii_letters
 from typing import Iterable, Optional, NewType
 from urllib.request import urlopen
 
-from data import custom_dia, diacritics, ligatures, spacing_dia
+from data import custom_dia, diacritics, ligatures, spacing_dia, keynames
 
 basicConfig(level=10)
 
@@ -127,7 +127,7 @@ def findmap(char: str) -> list[Keys]:
         # compatibility decomposition (does circled letters and superscripts and stuff)
         make_diacritic_sequences((types,), deco)
     elif len(deco) >= 2:
-        # canonical decomposition (splits ü into u + ◌̈ into ["u])
+        # canonical decomposition (splits â into a + ◌̂ into [^a])
         make_diacritic_sequences(["◌" + x for x in deco[1:]], deco[0])
 
     # makes ligatures
@@ -244,15 +244,8 @@ def main() -> None:
     with open(expanduser("~/.XCompose"), 'w', encoding='utf-8') as f:
 
         def add_rule(keys: Keys, result: str, comment: str) -> None:
-            # https://github.com/samhocevar/wincompose/blob/7f273636087bd55cbedc178babf5c36375a836f4/src/wincompose/sequences/Key.cs#L55
-            replacements = {
-                "⎄": "Multi_key", " ": "space",
-                "←": "Left", "↑": "Up", "→": "Right", "↓": "Down",
-                "⇱": "Home", "⇲": "End", "⌫": "Backspace", "⌦": "Delete", "↹": "Tab", "↵": "Return",
-                ":": "colon", "<": "less", ">": "greater",
-            }
             f.write("<Multi_key> <{}> : \"{}\" #{}\n".format(
-                '> <'.join(replacements.get(i, i) for i in str(keys)),
+                '> <'.join(keynames.get(i, i) for i in str(keys)),
                 result.replace(r'"', r'\0x0022'),  # \" doesnt work for some reason
                 comment))
             if CHECK and keys in rules: warning(f"[{keys}] found more than once ({comment})")
@@ -264,10 +257,9 @@ def main() -> None:
             try:
                 charname = udata[chr(cp)].name
             except KeyError:
-                # charname = "UNNAMED"
-                pass
-            else:  # note that this means that only characters with name will be processed
-                for rule in findmap(chr(cp)): add_rule(rule, chr(cp), charname)
+                charname = "UNNAMED"
+            for rule in findmap(chr(cp)):
+                add_rule(rule, chr(cp), charname)
 
         info("writing macros...")
         for text, rule in macros:
