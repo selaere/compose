@@ -14,7 +14,7 @@ custom_dia: dict[str, tuple[str, str]] = {
               "ØøȺȻȼȾɆɇⱥⱦꝂꝃꝘꝙꝞꝟꞸꞹᵺꬿ"),
     "ASCENDER": ("ГгBbCcDdGgKkPpRTtYydɖhꜧɢqHʈ",
                  "ҐґƁɓƇƈƊɗƓɠƘƙƤƥƦƬƭƳƴɗᶑɦɧʛʠꞪ𝼉"),
-    "DESCENDER": ("ЙйЛлМмНнҒғХxЗзСсӅӆ" "mFfQqdnrszltƭTʮɯɹaɗeɛɜəiɔʃuʒRMHhɬʀꭓꭗɮɺǃʤɨoʧc",
+    "DESCENDER": ("ЙйЛлМмНнҒғХхЗзСсӅӆ" "mFfQqdnrszltƭTʮɯɹaɗeɛɜəiɔʃuʒRMHhɬʀꭓꭗɮɺǃʤɨoʧc",
                   "ҊҋӅӆӍӎӉӊӺӻӼӽҘҙҪҫԒԓ" "ɱƑƒɊɋɖɳɽʂʐɭʈ𝼉ƮʯɰɻᶏᶑᶒᶓᶔᶕᶖᶗᶘᶙᶚⱤⱮꜦꜧꞎꭆꭕꭙ𝼅𝼈𝼊𝼙𝼚𝼛𝼜𝼝"),
     "PALATAL": ("tbdfgklmnprsʃvxzchCSZʤɬŋɹɾʧʒ",
                 "ƫᶀᶁᶂᶃᶄᶅᶆᶇᶈᶉᶊᶋᶌᶍᶎꞔꞕꟄꟅꟆ𝼒𝼓𝼔𝼕𝼖𝼗𝼘"),
@@ -38,7 +38,7 @@ custom_dia: dict[str, tuple[str, str]] = {
     "CIRCLED": ("⊕⊖⊖⊗⊘⊙⊚⊛⊛⊜⊝⎊⚇", "+-−×/·∘*⋆=-∇¨"),
     "DIAERESIS": ("⊤∇*⋆∘○~>", "⍡⍢⍣⍣⍤⍥⍨⍩"),
 
-    # no these dont decompose. i dont know either
+    # no these dont decompose
     "GLOTTAL": ("AaIiUu", "ꞺꞻꞼꞽꞾꞿ"),
 
     # ά GREEK SMALL LETTER ALPHA WITH TONOS and
@@ -229,16 +229,12 @@ keynames = {
     " ": "space", "!": "exclam", "\"": "quotedbl", "#": "numbersign", "$": "dollar",
     "%": "percent", "&": "ampersand", "'": "apostrophe", "(": "parenleft",
     ")": "parenright", "+": "plus", ",": "comma", "-": "minus", ".": "period",
-    ";": "semicolon", "=": "equal", "@": "at", "[": "bracketleft", "\\": "backslash",
-    "]": "bracketright", "_": "underscore", "{": "braceleft", "|": "bar",
-    "}": "braceright",
-    # commented out because my keyboard has the dead ones
-    # "~": "asciitilde", "^": "asciicircum", "`": "grave",
+    ";": "semicolon", "=": "equal", "?": "question", "@": "at", "[": "bracketleft",
+    "\\": "backslash", "]": "bracketright", "_": "underscore", "{": "braceleft", "|": "bar",
+    "}": "braceright", "~": "asciitilde", "^": "asciicircum", "`": "grave",
     # i got used to using the numpad keys for these
     # "*": "asterisk", "/": "slash",
     "*": "KP_Multiply", "/": "KP_Divide",
-    # specific ones from my keyboard. won't work in wincompose
-    "~": "dead_tilde", "^": "dead_circumflex", "`": "dead_grave",
     "ç": "ccedilla", "Ç": "Ccedilla", "ñ": "ntilde", "Ñ": "Ntilde",
     "º": "masculine", "ª": "ordfeminine", "¡": "exclamdown", "¿": "questiondown",
     "·": "periodcentered", "¬": "notsign",
