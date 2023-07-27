@@ -268,7 +268,7 @@ def main() -> None:
         if CHECK:
             info("looking for shadows...")
             for rule in rules:
-                for n in range(1, len(rule)):  # should this be `enumerate`?
+                for n in range(1, len(rule)):  # should this be `enumerate`?  # no fuck you
                     if rule[:n] in rules: warning(f"[{rule[:n]}] shadows [{rule}]")
 
         info(f"done! {datetime.now() - then}")

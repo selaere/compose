@@ -222,8 +222,8 @@ spacing_dia = (''.join(spacing_dia[0].strip('◌').split('◌')), spacing_dia[1]
 keynames = {
     # special keys supported by wincompose
     "⎄": "Multi_key", " ": "space",
-    "←": "Left", "↑": "Up", "→": "Right", "↓": "Down",
-    "⇱": "Home", "⇲": "End", "⌫": "Backspace", "⌦": "Delete", "↹": "Tab", "↵": "Return",
+    "←": "KP_4", "↑": "KP_8", "→": "KP_6", "↓": "KP_2",
+    "⇱": "Home", "⇲": "End", "⌫": "Backspace", "⌦": "Delete", "↹": "Tab", "↵": "KP_5",
     ":": "colon", "<": "less", ">": "greater",
     # these aren't necessary for wincompose but won't hurt to have
     " ": "space", "!": "exclam", "\"": "quotedbl", "#": "numbersign", "$": "dollar",
