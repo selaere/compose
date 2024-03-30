@@ -226,6 +226,7 @@ keynames = {
     # special keys supported by wincompose
     "⎄": "Multi_key", " ": "space",
     "←": "KP_4", "↑": "KP_8", "→": "KP_6", "↓": "KP_2",
+    "↖": "KP_7", "↗": "KP_9", "↘": "KP_3", "↙": "KP_1",
     "⇱": "Home", "⇲": "End", "⌫": "Backspace", "⌦": "Delete", "↹": "Tab", "↵": "KP_5",
     ":": "colon", "<": "less", ">": "greater",
     # these aren't necessary for wincompose but won't hurt to have
