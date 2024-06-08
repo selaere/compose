@@ -827,6 +827,7 @@
 ☒::boxx
 ☺::facew
 ☻::faceb
+☼::sun
 ♀::female
 ♂::male
 ♠::spade
